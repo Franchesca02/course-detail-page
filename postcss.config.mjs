@@ -1,6 +1,11 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    "@tailwindcss/postcss": {
+      config: {
+        // Enable component layer
+        layers: ['base', 'components', 'utilities']
+      }
+    },
   },
 };
 
