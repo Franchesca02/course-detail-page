@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Header from './components/Header';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -8,10 +8,10 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'StartHub Academy',
-  description: 'Master modern web development with expert-led courses',
-  icons: '/favicon.ico',
+  description: 'SEO optimized course detail pages with Next.js',
+  icons: 'favicon.ico'
 };
 
 export default function RootLayout({
@@ -21,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-50`}>
+        <Header />
         {children}
       </body>
     </html>
